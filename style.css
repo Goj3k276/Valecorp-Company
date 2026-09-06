@@ -1,0 +1,1060 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17221b;
+    background: white;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.97);
+    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar {
+    max-width: 1300px;
+    margin: auto;
+    padding: 12px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #1b1b1b;
+    font-weight: 400;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #176b3a;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+}
+
+
+/* PORTADA */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 150px 8% 80px;
+
+    background:
+        linear-gradient(
+            rgba(5, 50, 45, 0.45),
+            rgba(10, 70, 80, 0.35)
+        ),
+        url("img/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.08;
+    margin-bottom: 25px;
+}
+
+.hero-content > p {
+    font-size: 19px;
+    max-width: 650px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* BOTONES */
+
+.btn {
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    touch-action: manipulation;
+
+    background: #f3b72f;
+
+    color: #17221b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+
+/* CABECERA DE PÁGINAS */
+
+.page-header {
+    padding: 170px 20px 90px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(rgba(0,45,25,.80), rgba(0,45,25,.80)),
+        url("img/frutas.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header p {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.page-header h1 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.page-header span {
+    font-size: 18px;
+}
+
+
+/* SECCIONES */
+
+.section {
+    padding: 100px 7%;
+}
+
+.light {
+    background: #f5f8f5;
+}
+
+.section-title {
+    max-width: 800px;
+    margin: auto auto 55px;
+    text-align: center;
+}
+
+.section-title > p:first-child {
+    color: #176b3a;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 5px;
+}
+
+
+/* NOSOTROS */
+
+.about {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    color: #176b3a;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* TARJETAS */
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    gap: 25px;
+}
+
+.cards.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.values {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.services {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: white;
+
+    padding: 35px 28px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+}
+
+.card h2,
+.card h3 {
+    margin: 12px 0;
+}
+
+.icon {
+    font-size: 38px;
+}
+
+.service {
+    transition: .3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* PROCESO */
+
+.process {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.process-item {
+    border-left: 4px solid #176b3a;
+    padding: 10px 25px;
+}
+
+.process-item span {
+    color: #176b3a;
+    font-weight: bold;
+}
+
+.process-item h3 {
+    font-size: 24px;
+}
+
+
+/* ORGANIGRAMA */
+
+.organization {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.organization div {
+    background: #176b3a;
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.organization span {
+    display: block;
+    font-size: 30px;
+}
+
+
+/* CONTENIDO */
+
+.content-wide {
+    max-width: 900px;
+    margin: auto;
+}
+
+.content-wide h3 {
+    font-size: 27px;
+    margin: 30px 0 10px;
+}
+
+.big-list {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.big-list li {
+    margin-bottom: 10px;
+}
+
+
+/* ACORDEÓN */
+
+.accordion {
+    max-width: 900px;
+    margin: auto;
+}
+
+.accordion-item {
+    margin-bottom: 12px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,.07);
+}
+
+.accordion-item button {
+    width: 100%;
+
+    padding: 20px;
+
+    border: none;
+
+    background: white;
+
+    text-align: left;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.accordion-content {
+    display: none;
+
+    background: white;
+
+    padding: 0 20px 20px;
+}
+
+.accordion-content p {
+    margin-top: 10px;
+}
+
+
+/* FODA */
+
+.foda {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.foda-box {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.foda-box h3 {
+    color: #176b3a;
+    margin-bottom: 15px;
+}
+
+.foda-box ul {
+    padding-left: 20px;
+}
+
+.foda-box li {
+    margin-bottom: 8px;
+}
+
+
+/* CONTACTO */
+
+.contact {
+    text-align: center;
+}
+
+.contact-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    padding: 40px 25px;
+
+    background: #f5f8f5;
+
+    border-radius: 12px;
+}
+
+
+/* COMPROMISO */
+
+.commitment {
+    padding: 100px 8%;
+
+    background: #176b3a;
+
+    color: white;
+}
+
+.commitment > div {
+    max-width: 900px;
+    margin: auto;
+}
+
+.commitment h2 {
+    font-size: 45px;
+    margin: 15px 0 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111814;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer .logo {
+    margin-bottom: 15px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #aaa;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 73px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 0;
+
+         box-shadow: 0 10px 20px rgba(0,0,0,.10);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+
+      .nav-links a {
+        display: block;
+
+        padding: 17px 25px;
+
+        font-size: 17px;
+    }
+
+    .nav-links a:active {
+        background: #f0f5f1;
+    }
+
+    .menu-btn {
+        display: block;
+
+        cursor: pointer;
+
+        padding: 8px;
+
+        font-size: 27px;
+    }
+
+    .about,
+    .cards.two {
+        grid-template-columns: 1fr;
+    }
+
+    .values,
+    .services,
+    .process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 5%;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .values,
+    .services,
+    .process,
+    .foda {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .commitment h2 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 900px) {
+
+    .fruit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media (max-width: 600px) {
+
+    .fruit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fruit-card img {
+        height: 250px;
+    }
+
+}
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #176b3a;
+    letter-spacing: 1px;
+}
+
+.brand-company {
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 2px;
+}
+/* EFECTO DE ESCARCHA */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 180px;
+    height: 180px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.35;
+    background:
+        radial-gradient(circle at 10% 20%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 30% 50%, white 0 3px, transparent 4px),
+        radial-gradient(circle at 60% 25%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 70%, white 0 3px, transparent 4px),
+        linear-gradient(135deg, transparent 45%, rgba(255,255,255,.8) 46%, transparent 48%);
+}
+
+body::before {
+    left: 0;
+    border-bottom-right-radius: 100%;
+}
+
+body::after {
+    right: 0;
+    border-bottom-left-radius: 100%;
+}
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.snow-container span {
+    position: absolute;
+    top: -30px;
+
+    color: #8ED8F8;
+
+    font-size: 40px;
+
+    opacity: 1.5;
+
+    animation: snow 12s linear infinite;
+}
+
+.snow-container span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.snow-container span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.snow-container span:nth-child(3) {
+    left: 40%;
+    animation-delay: 6s;
+}
+
+.snow-container span:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.snow-container span:nth-child(5) {
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.snow-container span:nth-child(6) {
+    left: 82%;
+    animation-delay: 7s;
+}
+
+.snow-container span:nth-child(7) {
+    left: 93%;
+    animation-delay: 2s;
+}
+
+@keyframes snow {
+
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+.service-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 35px 25px;
+    border-radius: 15px;
+
+    border: 1px solid rgba(180, 220, 230, 0.7);
+
+    box-shadow:
+        0 10px 30px rgba(70, 130, 150, 0.12),
+        inset 0 0 20px rgba(220, 245, 255, 0.4);
+
+    transition: 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(70, 150, 180, 0.22),
+        inset 0 0 25px rgba(220, 250, 255, 0.6);
+}
+.frost-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.9),
+            rgba(235,248,250,0.75)
+        );
+
+    border: 1px solid rgba(190,220,230,0.7);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(50,100,120,0.10),
+        inset 0 0 30px rgba(255,255,255,0.7);
+
+    overflow: hidden;
+}
+/* FONDO BLANCO CON EFECTO DE CONGELADO */
+body {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(142, 216, 248, 0.18), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(190, 235, 250, 0.20), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(142, 216, 248, 0.12), transparent 30%),
+        #ffffff;
+}
+.about,
+.services,
+.products,
+.contact {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(142, 216, 248, 0.35);
+    box-shadow: 0 8px 30px rgba(100, 190, 220, 0.10);
+    backdrop-filter: blur(8px);
+}
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 180px;
+    height: 180px;
+    background: rgba(142, 216, 248, 0.12);
+    border-radius: 50%;
+    filter: blur(35px);
+    pointer-events: none;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background: rgba(142, 216, 248, 0.12);
+    border-radius: 50%;
+    filter: blur(40px);
+    pointer-events: none;
+}
+/* =========================================
+   EFECTO DE HIELO EN LOS BORDES
+   ========================================= */
+
+.frosted-box {
+    position: relative;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Borde de hielo */
+.frosted-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 8px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #bfe8ff,
+        #e6f6ff,
+        #ffffff,
+        #d8f0ff,
+        #bfe8ff
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+/* =========================================
+   FONDO DE FRUTAS PARA LOS ENCABEZADOS
+   ========================================= */
+
+.hero {
+    position: relative;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url("img/fondo-frutas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen */
+.hero::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Texto encima de la imagen */
+.hero .contenido {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título pequeño */
+.hero .subtitulo {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: 56px;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Descripción */
+.hero p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: white;
+}
+/* =========================================
+   FONDO DE FRUTAS - PÁGINA NOSOTROS
+   ========================================= */
+
+.nosotros-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("img/fondo-frutas.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* FONDO DE SERVICIOS */
+
+.servicios-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("img/fondo-frutas.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* FONDO DE EMPRESA */
+
+.empresa-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("img/fondo-frutas.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* FONDO DE CONTACTO */
+
+.contacto-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("img/fondo-frutas.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero h1,
+.hero h2,
+.hero p,
+.hero span {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
