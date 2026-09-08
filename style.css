@@ -47,8 +47,8 @@ header {
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 999px;
+    height: 130px;
     object-fit: contain;
     display: block;
 }
@@ -1057,4 +1057,15 @@ section::after {
 .hero span {
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+.logo-hero {
+    width: 350px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
 }
