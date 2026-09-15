@@ -1256,3 +1256,655 @@ section::after {
     }
 
 }
+/* =====================================
+   JUEGO VALECORP
+   ===================================== */
+
+.zona-juego {
+
+    max-width: 1050px;
+
+    margin: 50px auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+.zona-juego h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.zona-juego > p {
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.informacion-juego {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.informacion-juego div {
+
+    background: white;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.10);
+
+    font-size: 16px;
+
+}
+
+
+.informacion-juego strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 5px;
+
+}
+
+
+#juego {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 950px;
+
+    height: 520px;
+
+    margin: auto;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e5faff,
+            #ffffff
+        );
+
+    border: 3px solid #b8e8f5;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+#mensaje-inicio {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 90%;
+
+    z-index: 100;
+
+}
+
+
+#mensaje-inicio h2 {
+
+    font-size: 30px;
+
+}
+
+
+#mensaje-inicio button {
+
+    padding: 16px 35px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #168c45;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+#mensaje-inicio button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.fruta-juego {
+
+    position: absolute;
+
+    font-size: 52px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    animation:
+
+        aparecerFruta 0.25s ease;
+
+    transition:
+        transform 0.15s;
+
+    z-index: 20;
+
+}
+
+
+.fruta-juego:hover {
+
+    transform: scale(1.3) rotate(10deg);
+
+}
+
+
+.fruta-juego.atrapada {
+
+    animation:
+        desaparecer 0.2s forwards;
+
+}
+
+
+.fruta-juego.mala {
+
+    animation:
+        explotar 0.4s;
+
+}
+
+
+.mensaje-nivel {
+
+    position: absolute;
+
+    top: 45%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    color: #168c45;
+
+    z-index: 200;
+
+    animation:
+        aparecerNivel 1s ease;
+
+}
+
+
+.puntos-flotantes {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #168c45;
+
+    z-index: 300;
+
+    animation:
+        subirPuntos 0.7s forwards;
+
+}
+
+
+.sacudida {
+
+    animation:
+        sacudir 0.35s;
+
+}
+
+
+.resultado {
+
+    margin-top: 30px;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+}
+
+
+@keyframes aparecerFruta {
+
+    from {
+
+        transform:
+            scale(0);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform:
+            scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes desaparecer {
+
+    to {
+
+        transform:
+            scale(2);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes explotar {
+
+    50% {
+
+        transform:
+            scale(1.6)
+            rotate(20deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(0);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes subirPuntos {
+
+    from {
+
+        transform:
+            translateY(0);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(-50px);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes sacudir {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes aparecerNivel {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity: 0;
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================
+   JUEGO EN CELULAR
+   ===================================== */
+
+@media (max-width: 768px) {
+
+
+    .zona-juego {
+
+        padding: 12px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .zona-juego h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .zona-juego > p {
+
+        font-size: 16px;
+
+    }
+
+
+    .informacion-juego {
+
+        gap: 8px;
+
+    }
+
+
+    .informacion-juego div {
+
+        padding: 8px 12px;
+
+        font-size: 13px;
+
+    }
+
+
+    .informacion-juego strong {
+
+        font-size: 20px;
+
+    }
+
+
+    #juego {
+
+        height: 450px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .fruta-juego {
+
+        font-size: 42px;
+
+    }
+
+
+    .mensaje-nivel {
+
+        font-size: 32px;
+
+    }
+
+
+}
+/* =====================================
+   REDES SOCIALES
+   ===================================== */
+
+.redes-contenedor {
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding: 20px;
+
+}
+
+
+.redes-presentacion {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.redes-presentacion h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.redes-presentacion p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+.redes-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.red-social {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.red-social:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+
+}
+
+
+.icono-red {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+    background: #eef8f2;
+
+}
+
+
+.red-social h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.red-social p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+.red-social span {
+
+    font-weight: bold;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .redes-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .redes-presentacion h1 {
+
+        font-size: 30px;
+
+    }
+
+    .red-social {
+
+        padding: 25px;
+
+    }
+
+}

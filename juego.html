@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reto VALECORP</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- MENÚ -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img src="img/logo.png" alt="VALECORP COMPANY">
+
+        </a>
+
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="nosotros.html">Nosotros</a>
+            </li>
+
+            <li>
+                <a href="servicios.html">Servicios</a>
+            </li>
+
+            <li>
+                <a href="empresa.html">Empresa</a>
+            </li>
+
+            <li>
+                <a href="ventas.html">Ventas</a>
+            </li>
+
+            <li>
+                <a href="redes.html">Redes Sociales</a>
+            </li>
+
+            <li>
+                <a href="juego.html">Juego</a>
+            </li>
+
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<main class="zona-juego">
+
+
+    <h1>
+        🍎 Reto VALECORP 🍌
+    </h1>
+
+
+    <p>
+        ¡Atrapa las frutas buenas y evita los obstáculos!
+    </p>
+
+
+
+    <div class="informacion-juego">
+
+
+        <div>
+
+            Puntos
+
+            <strong id="puntos">
+                0
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            Tiempo
+
+            <strong id="tiempo">
+                30
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            Nivel
+
+            <strong id="nivel">
+                1
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            Combo
+
+            <strong id="combo">
+                0
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            Récord
+
+            <strong id="record">
+                0
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div id="juego">
+
+
+        <div id="mensaje-inicio">
+
+
+            <h2>
+                ¿Estás preparado?
+            </h2>
+
+
+            <button onclick="iniciarJuego()">
+
+                🍎 EMPEZAR
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div
+        id="resultado"
+        class="resultado">
+    </div>
+
+
+</main>
+
+
+
+<script src="juego.js"></script>
+
+<script>
+
+function toggleMenu() {
+
+    const navLinks = document.getElementById("navLinks");
+
+    navLinks.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+
+</html>
