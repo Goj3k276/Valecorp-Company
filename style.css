@@ -1756,7 +1756,7 @@ section::after {
 
     margin: 60px auto;
 
-    padding: 20px;
+    padding: 110px;
 
 }
 
@@ -1904,6 +1904,146 @@ section::after {
     .red-social {
 
         padding: 25px;
+
+    }
+
+}
+/* =====================================
+   FONDO DE FRUTAS DEL JUEGO
+   ===================================== */
+
+.zona-juego {
+
+    position: relative;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 160px 20px 70px 20px;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.70),
+            rgba(255, 255, 255, 0.70)
+        ),
+        url("img/fondo-frutas.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+}
+
+
+/* TÍTULO DEL JUEGO */
+
+.zona-juego h1 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 40px;
+
+    color: #168c45;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        1px 1px 2px white,
+        0 2px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* TEXTO DEBAJO DEL TÍTULO */
+
+.zona-juego > p {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    color: #222;
+
+    font-weight: 500;
+
+}
+
+
+/* INFORMACIÓN DEL JUEGO */
+
+.informacion-juego {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* RECUADRO PRINCIPAL DEL JUEGO */
+
+#juego {
+
+    position: relative;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(235, 251, 255, 0.97),
+            rgba(255, 255, 255, 0.97)
+        );
+
+    border: 3px solid #b8e8f5;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =====================================
+   CELULAR
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    .zona-juego {
+
+        padding: 60px 12px 50px 12px;
+
+        background-position: center;
+
+    }
+
+
+    .zona-juego h1 {
+
+        font-size: 30px;
+
+        margin-top: 10px;
+
+    }
+
+
+    .zona-juego > p {
+
+        font-size: 16px;
 
     }
 
