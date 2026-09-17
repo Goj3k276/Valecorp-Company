@@ -135,7 +135,7 @@
         <!-- BANANO -->
         <div class="tarjeta-empresa">
             
-            <img src="img/banano.jpg" alt="Banano">
+            <img src="img/banano.jpg" alt="Banano" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Banano</h3>
                 <p>
@@ -148,7 +148,7 @@
 
         <!-- MONTACARGA -->
         <div class="tarjeta-empresa">
-            <img src="img/montacarga.jpg" alt="Montacarga eléctrica">
+            <img src="img/montacarga.jpg" alt="Montacarga eléctrica" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Montacarga eléctrica</h3>
                 <p>
@@ -160,7 +160,7 @@
 
         <!-- ESTOCA -->
         <div class="tarjeta-empresa">
-            <img src="img/estoca-electrica.jpg" alt="Estoca eléctrica">
+            <img src="img/estoca-electrica.jpg" alt="Estoca eléctrica" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Estoca eléctrica</h3>
                 <p>
@@ -172,7 +172,7 @@
 
         <!-- EQUIPO VALECORP -->
         <div class="tarjeta-empresa">
-            <img src="img/equipo-valecorp.jpg" alt="Equipo VALECORP">
+            <img src="img/equipo-valecorp.jpg" alt="Equipo VALECORP" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Equipo VALECORP</h3>
                 <p>
@@ -184,7 +184,7 @@
 
         <!-- PALLETS -->
         <div class="tarjeta-empresa">
-            <img src="img/pallets.jpg" alt="Pallets">
+            <img src="img/pallets.jpg" alt="Pallets" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Pallets</h3>
                 <p>
@@ -196,7 +196,7 @@
 
         <!-- CÁMARA BAJO 0 -->
         <div class="tarjeta-empresa">
-            <img src="img/camara-bajo-0.jpg" alt="Cámara bajo 0">
+            <img src="img/camara-bajo-0.jpg" alt="Cámara bajo 0" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Cámara bajo 0</h3>
                 <p>
@@ -208,7 +208,7 @@
 
         <!-- CÁMARA DE BANANOS -->
         <div class="tarjeta-empresa">
-            <img src="img/camara-banano.jpg" alt="Cámara de bananos">
+            <img src="img/camara-banano.jpg" alt="Cámara de bananos" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Cámara de bananos</h3>
                 <p>
@@ -220,7 +220,7 @@
 
         <!-- ALMACÉN -->
         <div class="tarjeta-empresa">
-            <img src="img/almacen.jpg" alt="Almacén">
+            <img src="img/almacen.jpg" alt="Almacén VALECORP" onclick="abrirImagen(this)">
             <div class="contenido-tarjeta">
                 <h3>Almacén</h3>
                 <p>
@@ -250,6 +250,40 @@
 <script src="script.js"></script>
 
 </body>
+<!-- VENTANA PARA VER LA IMAGEN GRANDE -->
+<div id="visorImagen" class="visor-imagen" onclick="cerrarImagen()">
+
+    <button class="cerrar-imagen" onclick="cerrarImagen(event)">
+        &times;
+    </button>
+
+    <img id="imagenGrande" src="" alt="Imagen ampliada" onclick="event.stopPropagation()">
+
+</div>
+<script>
+
+function abrirImagen(imagen) {
+
+    const visor = document.getElementById("visorImagen");
+    const imagenGrande = document.getElementById("imagenGrande");
+
+    imagenGrande.src = imagen.src;
+
+    visor.classList.add("activo");
+}
+
+function cerrarImagen(event) {
+
+    if (event) {
+        event.stopPropagation();
+    }
+
+    const visor = document.getElementById("visorImagen");
+
+    visor.classList.remove("activo");
+}
+
+</script>
 
 </html>
 <body>

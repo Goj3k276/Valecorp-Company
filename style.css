@@ -2048,3 +2048,138 @@ section::after {
     }
 
 }
+/* =========================================
+   VISOR DE IMÁGENES GRANDES - EMPRESA
+   ========================================= */
+
+.visor-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.88);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    
+    z-index: 9999;
+    
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Cuando se abre */
+.visor-imagen.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Imagen grande */
+.visor-imagen img {
+    max-width: 92%;
+    max-height: 90vh;
+    
+    width: auto;
+    height: auto;
+    
+    object-fit: contain;
+    
+    border-radius: 10px;
+    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    
+    animation: aparecerImagen 0.3s ease;
+}
+
+/* Animación */
+@keyframes aparecerImagen {
+
+    from {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* Botón X */
+.cerrar-imagen {
+    position: absolute;
+    
+    top: 20px;
+    right: 30px;
+    
+    width: 50px;
+    height: 50px;
+    
+    border: none;
+    border-radius: 50%;
+    
+    background: rgba(255, 255, 255, 0.9);
+    
+    color: #222;
+    
+    font-size: 35px;
+    line-height: 45px;
+    
+    cursor: pointer;
+    
+    z-index: 10000;
+    
+    transition: 0.3s;
+}
+
+.cerrar-imagen:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Cursor sobre las fotos */
+.tarjeta-empresa img {
+    cursor: zoom-in;
+    
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-empresa img:hover {
+    transform: scale(1.02);
+}
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .visor-imagen {
+        padding: 15px;
+    }
+
+    .visor-imagen img {
+        max-width: 96%;
+        max-height: 82vh;
+    }
+
+    .cerrar-imagen {
+        top: 15px;
+        right: 15px;
+        
+        width: 45px;
+        height: 45px;
+        
+        font-size: 30px;
+    }
+
+}
